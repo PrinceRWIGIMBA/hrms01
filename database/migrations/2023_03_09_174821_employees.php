@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('firstname',50);
             $table->string('lastname',50);
             $table->date('date_of_birth');
-            $table->foreignId('job_title_id')->constrained('job_titles','id');
-            $table->foreignId('department_id')->constrained('departments','id')->cascadeOnDelete();
+            $table->foreignId('job_title_id')->constrained('job_titles','id')->nullable();
+            $table->foreignId('department_id')->constrained('departments','id')->nullable()->cascadeOnDelete();
             $table->timestamps();
         });
     }
