@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use  App\Models\user;
 use  App\Models\department;
-use  App\Models\salary;
-use  App\Models\JobTitle;
+use  App\Models\employees;
+use  App\Models\job_titles;
 
 class UserController extends Controller
 {
@@ -15,8 +15,8 @@ class UserController extends Controller
             'users'=>user::all(),
             'user_count'=>user::count(),
             'depart'=>department::count(),
-            'employee'=>salary::count(),
-//            'job'=>job_titles::count()
+            'employee'=>employees::count(),
+           'job'=>job_titles::count()
         ]);
     }
 }
