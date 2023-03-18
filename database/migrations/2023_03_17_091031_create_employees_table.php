@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('firstname',50);
-            $table->string('lastname',50);
+            $table->string('laststname',50);
             $table->date('date_of_birth');
             $table->foreignId('job_title_id')->constrained('job_titles','id')->nullable();
             $table->foreignId('department_id')->constrained('departments','id')->nullable()->cascadeOnDelete();
+            $table->string("stipend",10)->default('0');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('emplyees');
+        Schema::dropIfExists('employees');
     }
 };

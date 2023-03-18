@@ -28,7 +28,7 @@
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     <td>{{$emp_row->firstname}}</td>
-                                    <td>{{$emp_row->lastname}}</td>
+                                    <td>{{$emp_row->laststname}}</td>
                                     <td>{{$emp_row->date_of_birth}}</td>
                                     <td>@if (!is_null($emp_row->job_title_id))
                                         {{$emp_row->getJobTitle->job_title_name}}                                        
@@ -50,6 +50,44 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        {{-- <table class="table">
+                            <tr>
+                                <th>#</th>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Date of Birth</th>
+                                <th>Job Title</th>
+                                <th>Department</th>
+                                <th>Action</th>
+                            </tr>
+                            <tbody>
+                                @foreach ($employee as $key=> $emp_row )
+                                @if (!is_null($emp_row->department_id))
+                                <tr>
+                                    <td>{{$key+1}}</td>
+                                    <td>{{$emp_row->firstname}}</td>
+                                    <td>{{$emp_row->laststname}}</td>
+                                    <td>{{$emp_row->date_of_birth}}</td>
+                                    <td>@if (!is_null($emp_row->job_title_id))
+                                        {{$emp_row->getJobTitle->job_title_name}}
+                                    @endif</td>
+                                    <td>
+                                        @if (!is_null($emp_row->department_id))
+                                        {{$emp_row->getDepartmentName->department_name}}
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <div style="display: inline-flex;">
+                                            <a href="{{url('/attendance/prasent/'.$emp_row->id)}}" class="btn btn-sm btn-primary " style="margin-right: .3rem">Present</a>
+                                            <a href="{{url('/attendance/absent/'.$emp_row->id)}}" class="btn btn-sm btn-danger">Absent</a>
+                                        </div>
+                                    </td>
+                                    </tr>
+                                @endif
+
+                                @endforeach
+                            </tbody>
+                        </table> --}}
                     </div>
                 </div>
                 <div class="card">
@@ -73,7 +111,7 @@
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     <td>{{$emp_row->firstname}}</td>
-                                    <td>{{$emp_row->lastname}}</td>
+                                    <td>{{$emp_row->laststname}}</td>
                                     <td>{{$emp_row->date_of_birth}}</td>
                                     <td>@if (!is_null($emp_row->job_title_id))
                                         {{$emp_row->getJobTitle->job_title_name}}                                        
@@ -110,7 +148,7 @@
                                 <div class="col-md-12">
                                 <div class="form-group">
                                     <label>FirstName</label>
-                                    <input type="text" class="form-control border-input" name="firstname">
+                                    <input type="text" class="form-control border-input" name="firstname" required>
                                 </div>
                                 </div>
                             </div>
@@ -118,7 +156,7 @@
                                 <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Lastname</label>
-                                    <input type="text" class="form-control border-input" name="lastname">
+                                    <input type="text" class="form-control border-input" name="lastname" required>
                                 </div>
                                 </div>
                             </div>
@@ -126,7 +164,7 @@
                                 <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Date of Birth</label>
-                                    <input type="date" class="form-control border-input" name="date_of_birth">
+                                    <input type="date" class="form-control border-input" name="date_of_birth" required>
                                 </div>
                                 </div>
                             </div>

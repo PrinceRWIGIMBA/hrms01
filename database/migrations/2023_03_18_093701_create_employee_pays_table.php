@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('attendances', function (Blueprint $table) {
+        Schema::create('employee_pays', function (Blueprint $table) {
             $table->id();
-            $table->date('attendance_date');
-            $table->enum('attendance_status',['present','absent','sick','vacation'])->default('absent');
+            $table->date('period_paid_for');
+            $table->double('amount_paid');
             $table->foreignId('employee_id')->contrained('employees','id')->cascadeOnDelete();
             $table->timestamps();
         });
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('attendances');
+        Schema::dropIfExists('employee_pays');
     }
 };
