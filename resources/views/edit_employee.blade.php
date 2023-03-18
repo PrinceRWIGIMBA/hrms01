@@ -25,7 +25,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Lastname</label>
-                                        <input type="text" class="form-control border-input" value="{{$employeeToEdit->lastname}}" name="lastname">
+                                        <input type="text" class="form-control border-input" value="{{$employeeToEdit->laststname}}" name="lastname">
                                     </div>
                                 </div>
                                 <div class="col-md-4">

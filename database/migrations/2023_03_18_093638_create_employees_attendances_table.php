@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('departments', function (Blueprint $table) {
+        Schema::create('employees_attendances', function (Blueprint $table) {
             $table->id();
-            $table->string('department_name',50)->nullable();
-            $table->text('description')->nullable();
+            $table->date('attendance_date');
+            $table->double('amount');
+            $table->boolean('is_paid');
+            $table->foreignId('employee_id')->contrained('employees','id')->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -24,10 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('departments');
+        Schema::dropIfExists('employees_attendances');
     }
 };
-
-
-
-

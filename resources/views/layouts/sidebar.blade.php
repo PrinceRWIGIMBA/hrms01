@@ -73,7 +73,13 @@
                 <p>Notifications</p>
             </a>
         </li> --}}
-        
+    </li>
+    <li class="{{Request::is ('attendance')?'active':''}}">
+     <a href="/attendance">
+         <i class="fas fa-list"></i>
+         <p>Attendance</p>
+     </a>
+ </li>
         {{-- <li class="active-pro">
             <a href="upgrade">
                 <i class="ti-export"></i>

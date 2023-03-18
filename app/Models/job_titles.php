@@ -15,3 +15,10 @@ class job_titles extends Model
         'description',
     ];
 }
+
+
+
+
+
+
+

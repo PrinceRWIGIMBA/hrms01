@@ -9,3 +9,4 @@ class leaves extends Model
 {
     use HasFactory;
 }
+
