@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('prince','dashboard')
-@section('sign','Home');
+{{-- @section('sign','Home'); --}}
 @section('contents')
 <div class="content">
     <div class="container-fluid">

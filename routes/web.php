@@ -17,6 +17,7 @@ use App\Http\Controllers\AttendanceController;
 */
 
 Route::get('/',[App\Http\Controllers\UserController::class,'getAllData'] )->middleware('auth');
+Route::get('/admin',[App\Http\Controllers\adminController::class,'index'] )->middleware('auth');
 Route::get('/depart_insert', [DepartController::class,'getAllDepart'])->middleware('auth');
 Route::post('/depart/save',[DepartController::class,'saveDepart'])->middleware('auth');
 Route::post('/depart/update', [DepartController::class,'updateDepart'])->middleware('auth');
@@ -52,6 +53,8 @@ Route::get('/attendances/payment/{id}', [AttendanceController::class,'payEmploye
 Route::get('/home', function () {
     return redirect('/');
 });
+
+
 //Route::get('/table', function () {
 //     return view('table');
 // });Route::get('/typograph', function () {

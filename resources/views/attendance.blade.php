@@ -6,7 +6,7 @@
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-8 col-md-6">
+            <div class="col-lg-12 col-md-12">
                 <div class="card">
                     <div class="header">
                         <h4 class="title">List of Employees </h4>
@@ -87,7 +87,7 @@
                 <div class="card">
                     <div class="header">
                         <h4 class="title">PAYMENT MADE</h4>
-                        <input type="date"  name="period_paid_for" style="margin-left:55em">
+                        <input type="date"  name="period_paid_for" style="margin-left:30em">
                     </div>
                     <div class="content">
                         <table class="table">

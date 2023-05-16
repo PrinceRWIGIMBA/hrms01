@@ -10,7 +10,7 @@
                 <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="ti-home"></i>
-                            <p>@yield('sign')</p>
+                            <p>HOME</p>
                             <b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu">
